@@ -1,101 +1,70 @@
+import { Footer } from "@/components/Footer";
+import { Icons } from "@/components/Icons";
+import MaxWidthWrapper from "@/components/MaxWidthWrapper";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div>
+      <main>
+        <section className="relative overflow-hidden min-h-[600px] grid place-items-center border-b border-b-zinc-600/20">
+          <Icons.bgSquare className="absolute top-0 left-0" />
+          <Icons.bgTriangle className="absolute -bottom-1/4 right-20" />
+          <Icons.bgCircle className="absolute top-0 right-0" />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+          <div className="absolute -z-10 h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
+        
+          <div className="text-center z-10 relative">
+              <h3 className="text-2xl font-semibold">Hi, I&apos;m Heros</h3>
+              <h2 className="text-6xl font-semibold bg-gradient-to-r from-blue-600 to-blue-900 bg-clip-text text-transparent">Web Developer</h2>
+              <div className="my-6 grid grid-cols-6 grid-rows-2 justify-center gap-1">
+                {['Next.js', 'React.js', 'Tailwind CSS', 'TypeScript', 'JavaScript', 'HTML', 'CSS', 'Docker', 'Node.js', 'Figma', 'Three.js', 'SQL'].map((badge) => (
+                    <Badge key={badge}>{badge}</Badge>
+                ))}
+              </div>
+              <Link href={'https://github.com/herosnuciatelli?tab=repositories'} target="_blank"><Button>My Projects</Button></Link>
+          </div>
+        </section>
+        <MaxWidthWrapper className="py-12">
+          <section>
+              <div className="text-center">
+                <h2 className="font-semibold text-2xl">Profissional Experience</h2>
+                <p className="text-zinc-900/60">Website avaliable upon request.</p>
+              </div>
+              <div className="grid grid-cols-3 gap-3 py-12">
+                <div>
+                  <div className="cursor-pointer">
+                    <Image src="/images/imac-screen-mockup.png" className="w-full rounded" width={300} height={100} alt="clinic website" />
+                  </div>
+                  <div className="mt-6 flex flex-col gap-2">
+                    <h2 className="font-semibold text-xl">Top-rated clinic in Notting Hill 🔒</h2>
+                    <p className="text-zinc-900/60">Web Developer</p>
+                    <p>Launched a website that enhanced customer metrics.</p>
+                  </div>
+                </div>
+              </div>
+          </section>
+          <section className="py-12">
+              <div className="text-center">
+                <h2 className="font-semibold text-2xl">Case Study</h2>
+              </div>
+              <div className="grid grid-cols-3 gap-3 py-12">
+                <div className="cursor-pointer group">
+                  <div className="cursor-pointer min-h-60 bg-[url('/images/polyhedra-mockup.png')] border rounded bg-center bg-cover"></div>
+                  <div className="mt-6 flex flex-col gap-2">
+                    <h2 className="font-semibold text-xl bg-gradient-to-r cursor-pointer from-blue-600 to-blue-900 bg-clip-text group-hover:text-transparent transition-all">Study of Polyhedron</h2>
+                    <p className="text-zinc-900/60">UI/UX Design, Web Developer, Case Study</p>
+                    <p>Created a unique study of polyhedron experience through 3D models on a website</p>
+                  </div>
+                </div>
+              </div>
+          </section>
+        </MaxWidthWrapper>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      <Footer />
     </div>
   );
 }

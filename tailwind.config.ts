@@ -10,8 +10,12 @@ const config: Config = {
     extend: {
       colors: {
         background: "var(--background)",
-        foreground: "var(--foreground)",
       },
+      cursor: {
+        default: "url('/cursor/default.svg'), default",
+        pointer: "url('/cursor/pointer.svg'), pointer",
+        text: "url('/cursor/text.svg'), text",
+      }
     },
   },
   plugins: [],
