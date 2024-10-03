@@ -55,7 +55,7 @@ type ModalProps = {
 
 export const ModalTrigger:React.FC<ModalProps> = ({ children, setIsOpen }) => {
   return (
-    <div onClick={() => setIsOpen(true)} className="w-max h-max">
+    <div onClick={() => setIsOpen(true)}>
       {children}
     </div>
   )
