@@ -11,11 +11,6 @@ const config: Config = {
       colors: {
         background: "var(--background)",
       },
-      cursor: {
-        default: "url('/cursor/default.svg'), default",
-        pointer: "url('/cursor/pointer.svg'), pointer",
-        text: "url('/cursor/text.svg'), text",
-      }
     },
   },
   plugins: [],

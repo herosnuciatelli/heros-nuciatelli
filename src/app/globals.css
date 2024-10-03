@@ -5,15 +5,4 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  cursor: url('/cursor/default.svg'), auto;
-}
-
-button,
-a {
-  cursor: url('/cursor/pointer.svg'), pointer;
-}
-
-h2,
-h3 {
-  cursor: url('/cursor/text.svg'), text;
 }
