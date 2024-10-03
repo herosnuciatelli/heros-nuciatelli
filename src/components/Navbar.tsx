@@ -14,9 +14,12 @@ export const Navbar = () => {
             <Link href={'/'} className="absolute left-0">
               <Icons.logo className="size-10" />
             </Link>
-            <NavLinks />
+            <div className="hidden lg:block">
+              <NavLinks />
+            </div>
+            
           </div>
-          <div className="flex gap-9 items-center absolute right-0">
+          <div className="gap-9 items-center absolute right-0 hidden lg:flex">
             <Link href={'mailto:herosnuciatelli@gmail.com'}>
               <Button variant="outline">Contact Me</Button>
             </Link>

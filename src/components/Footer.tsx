@@ -6,9 +6,9 @@ export function Footer() {
     <MaxWidthWrapper className="mt-9">
       <footer className="border py-12 px-20 bg-zinc-100 rounded-t-lg flex flex-col gap-12">
         <div className="text-center">
-          <h3 className="font-semibold text-2xl">👋 Thanks for stopping by! Here is more of me if you are interested :&#41;</h3>
+          <h3 className="font-semibold lg:text-2xl">👋 Thanks for stopping by! Here is more of me if you are interested :&#41;</h3>
         </div>
-        <div className="grid grid-cols-4">
+        <div className="grid lg:grid-cols-4">
           <div>
             <h3 className="uppercase text-lg text-zinc-900/60 cursor-default">Pages</h3>
             <ul className="mt-3">
@@ -26,7 +26,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="col-start-3 col-end-5">
+          <div className="lg:col-start-3 lg:col-end-5">
             <span className="cursor-default">Made with love &copy; 2024 Heros Nuciatelli Vicente da Silva </span>
             <span className="text-blue-700 cursor-text">herosnuciatelli@gmail.com</span>
           </div>

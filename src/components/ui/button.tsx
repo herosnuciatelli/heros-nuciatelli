@@ -6,7 +6,8 @@ const button = tv({
   variants: {
     variant: {
       default: 'bg-zinc-900 text-zinc-50',
-      outline: 'border border-zinc-900 bg-none hover:bg-zinc-900 hover:text-zinc-50 transition-all'
+      outline: 'border border-zinc-900 bg-none hover:bg-zinc-900 hover:text-zinc-50 transition-all',
+      ghost: 'hover:bg-zinc-100'
     },
     size: {
       default: 'h-10 px-4'
