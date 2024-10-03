@@ -6,7 +6,7 @@ export default function About() {
     <>
       <main>
         <MaxWidthWrapper>
-          <div className="grid grid-cols-2 py-20">
+          <div className="grid lg:grid-cols-2 py-20">
             <div>
               <h2 className="font-semibold text-2xl">Get to know more <span className="bg-gradient-to-r from-blue-600 to-blue-900 bg-clip-text text-transparent">about Heros</span></h2>
               <div className="flex flex-col gap-3 mt-6">
