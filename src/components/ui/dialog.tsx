@@ -18,9 +18,11 @@ export const Modal:React.FC<Omit<ModalProps, 'setIsOpen' | 'isOpen'>> = ({childr
     };
 
     window.addEventListener('keydown', handleKeyDown);
+    document.body.style.overflow = 'hidden'
 
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = 'auto'
     };
   }, [IsOpen]);
   return (
@@ -29,10 +31,9 @@ export const Modal:React.FC<Omit<ModalProps, 'setIsOpen' | 'isOpen'>> = ({childr
         {children}
       </ModalTrigger>
       {IsOpen && (
-        <>
-          <div className="fixed inset-0 bg-zinc-900/40 z-10"></div>
-          <div className="fixed inset-0 place-items-center grid z-20 cursor-default">
-            <div className="w-full bg-zinc-50 max-w-lg py-5 px-8 rounded-md min-h-52">
+        <div className="grid place-items-center fixed inset-0 cursor-default">
+          <div className="fixed inset-0 bg-zinc-900/40 z-10" onClick={() => setIsOpen(false)}></div>
+            <div className="w-full bg-zinc-50 max-w-lg py-5 px-8 rounded-md min-h-52 absolute z-20">
               <div className="flex justify-end">
                 <Button variant="ghost" onClick={() => setIsOpen(false)}><XIcon className="size-4" /></Button>
               </div>
@@ -40,8 +41,7 @@ export const Modal:React.FC<Omit<ModalProps, 'setIsOpen' | 'isOpen'>> = ({childr
               <h2 className="py-3 text-lg font-semibold">To view this site, send me an email requesting it. 👀</h2>
               <label className="cursor-text">herosnuciatelli@gmail.com</label>
             </div>
-          </div>
-        </>
+        </div>
       )}
     </>
   )
