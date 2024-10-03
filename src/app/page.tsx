@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 import Link from "next/link";
+import { Modal } from "@/components/ui/dialog";
 
 export default function Home() {
   return (
@@ -37,10 +38,12 @@ export default function Home() {
               <div className="grid grid-cols-3 gap-3 py-12">
                 <div>
                   <div className="cursor-pointer">
-                    <Image src="/images/imac-screen-mockup.png" className="w-full rounded" width={300} height={100} alt="clinic website" />
+                    <Modal><Image src="/images/imac-screen-mockup.png" className="w-full rounded" width={300} height={100} alt="clinic website" /></Modal>
                   </div>
                   <div className="mt-6 flex flex-col gap-2">
-                    <h2 className="font-semibold text-xl">Top-rated clinic in Notting Hill 🔒</h2>
+                    <Modal>
+                      <h2 className="font-semibold text-xl cursor-pointer group"><span className="bg-gradient-to-r from-blue-600 to-blue-900 bg-clip-text group-hover:text-transparent transition-all">Top-rated clinic in Notting Hill </span>🔒</h2>
+                    </Modal>
                     <p className="text-zinc-900/60">Web Developer</p>
                     <p>Launched a website that enhanced customer metrics.</p>
                   </div>
@@ -52,13 +55,16 @@ export default function Home() {
                 <h2 className="font-semibold text-2xl">Case Study</h2>
               </div>
               <div className="grid grid-cols-3 gap-3 py-12">
+                
                 <div className="cursor-pointer group">
-                  <div className="cursor-pointer min-h-60 bg-[url('/images/polyhedra-mockup.png')] border rounded bg-center bg-cover"></div>
-                  <div className="mt-6 flex flex-col gap-2">
-                    <h2 className="font-semibold text-xl bg-gradient-to-r cursor-pointer from-blue-600 to-blue-900 bg-clip-text group-hover:text-transparent transition-all">Study of Polyhedron</h2>
-                    <p className="text-zinc-900/60">UI/UX Design, Web Developer, Case Study</p>
-                    <p>Created a unique study of polyhedron experience through 3D models on a website</p>
-                  </div>
+                  <Link href={'/case-study/polyhedra'}>
+                    <div className="cursor-pointer min-h-60 bg-[url('/images/polyhedra-mockup.png')] border rounded bg-center bg-cover"></div>
+                      <div className="mt-6 flex flex-col gap-2">
+                        <h2 className="font-semibold text-xl bg-gradient-to-r cursor-pointer from-blue-600 to-blue-900 bg-clip-text group-hover:text-transparent transition-all">Study of Polyhedron</h2>
+                        <p className="text-zinc-900/60">UI/UX Design, Web Developer, Case Study</p>
+                        <p>Created a unique study of polyhedron experience through 3D models on a website</p>
+                      </div>
+                  </Link>
                 </div>
               </div>
           </section>

@@ -11,7 +11,9 @@ export const Navbar = () => {
       <MaxWidthWrapper className="h-full">
         <div className="flex h-full items-center justify-center relative">
           <div className="flex gap-6 items-center">
-            <Icons.logo className="size-10 absolute left-0" />
+            <Link href={'/'} className="absolute left-0">
+              <Icons.logo className="size-10" />
+            </Link>
             <NavLinks />
           </div>
           <div className="flex gap-9 items-center absolute right-0">
