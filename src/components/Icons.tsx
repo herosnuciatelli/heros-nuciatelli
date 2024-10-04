@@ -41,5 +41,14 @@ export const Icons = {
         </linearGradient>
       </defs>
     </svg>
+  ),
+  characterProgramming: (props: LucideProps) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1500" viewBox="0 0 1500 1500" fill="none" {...props}>
+      <rect width="1500" height="1500" fill="url(#pattern0_301_153)"/>
+      <defs>
+      <pattern id="pattern0_301_153" patternContentUnits="objectBoundingBox" width="1" height="1">
+      </pattern>
+      </defs>
+    </svg>
   )
 }

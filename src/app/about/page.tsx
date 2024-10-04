@@ -1,5 +1,6 @@
 import { Footer } from "@/components/Footer";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -16,7 +17,7 @@ export default function About() {
               </div>
             </div>
             <div>
-              <h2>imagem</h2>
+              <Image src={'/images/character.png'} className="w-full" alt="my character" width={1000} height={100} />
             </div>
           </div>
           <div className="grid grid-cols-2 grid-rows-2 gap-y-9">
