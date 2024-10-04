@@ -2,9 +2,9 @@ import { Footer } from "@/components/Footer";
 import { Icons } from "@/components/Icons";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { Modal } from "@/components/ui/dialog";
+import { Carrousel } from "@/components/Carrousel";
 
 export default function Home() {
   return (
@@ -18,12 +18,10 @@ export default function Home() {
           <div className="absolute -z-10 h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
         
           <div className="text-center z-10 relative">
-              <h3 className="text-2xl font-semibold">Hi, I&apos;m Heros</h3>
-              <h2 className="text-4xl sm:text-6xl font-semibold bg-gradient-to-r from-blue-600 to-blue-900 bg-clip-text text-transparent">Web Developer</h2>
-              <div className="my-6 grid grid-cols-3 lg:grid-cols-6 lg:grid-rows-2 justify-center gap-1">
-                {['Next.js', 'React.js', 'Tailwind CSS', 'TypeScript', 'JavaScript', 'HTML', 'CSS', 'Docker', 'Node.js', 'Figma', 'Three.js', 'SQL'].map((badge) => (
-                    <Badge key={badge}>{badge}</Badge>
-                ))}
+              <h3 className="text-2xl lg:text-4xl font-semibold">Hi, I&apos;m Heros</h3>
+              <h2 className="text-4xl sm:text-6xl lg:text-[80px] font-semibold bg-gradient-to-r from-blue-600 to-blue-900 bg-clip-text text-transparent">Web Developer</h2>
+              <div className="my-6 flex justify-center">
+                <Carrousel />
               </div>
               <Link href={'https://github.com/herosnuciatelli?tab=repositories'} target="_blank"><Button>My Projects</Button></Link>
           </div>

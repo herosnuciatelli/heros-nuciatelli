@@ -6,3 +6,15 @@
 body {
   font-family: 'Poppins', sans-serif;
 }
+
+@keyframes carrousel {
+  0% {
+    transform: translateX(50px);
+  }
+  99% {
+    transform: translateX(-200px);
+  }
+  100% {
+    transform: translateX(50px);
+  }
+}

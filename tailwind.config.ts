@@ -11,6 +11,9 @@ const config: Config = {
       colors: {
         background: "var(--background)",
       },
+      animation: {
+        carrousel: "carrousel 15s linear infinite"
+      }
     },
   },
   plugins: [],
