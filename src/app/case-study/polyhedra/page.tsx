@@ -1,5 +1,9 @@
+import MaxWidthWrapper from "@/components/MaxWidthWrapper";
+
 export default function CaseStudyPolehedra() {
   return (
-    <h2>Hey assd</h2>
+    <MaxWidthWrapper>
+      <h2 className="py-10 font-semibold">I&apos;m building this case study... I appreciate your pantience. As soon as I can, I&apos;ll update it.</h2>
+    </MaxWidthWrapper>
   )
 }
