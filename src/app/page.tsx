@@ -1,10 +1,9 @@
-import { Footer } from "@/components/Footer";
-import { Icons } from "@/components/Icons";
-import MaxWidthWrapper from "@/components/MaxWidthWrapper";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { Modal } from "@/components/ui/dialog";
-import { Carrousel } from "@/components/Carrousel";
+import { Footer } from '@/components/Footer'
+import { Icons } from '@/components/Icons'
+import MaxWidthWrapper from '@/components/MaxWidthWrapper'
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
+import { Carrousel } from '@/components/Carrousel'
 
 export default function Home() {
   return (
@@ -16,58 +15,83 @@ export default function Home() {
           <Icons.bgCircle className="absolute hidden lg:block lg:top-0 lg:right-0" />
 
           <div className="absolute -z-10 h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
-        
+
           <div className="text-center z-10 relative">
-              <h3 className="text-2xl lg:text-4xl font-semibold">Hi, I&apos;m Heros</h3>
-              <h2 className="text-4xl sm:text-6xl lg:text-[80px] font-semibold bg-gradient-to-r from-blue-600 to-blue-900 bg-clip-text text-transparent">Web Developer</h2>
-              <div className="my-6 flex justify-center">
-                <Carrousel />
-              </div>
-              <Link href={'https://github.com/herosnuciatelli?tab=repositories'} target="_blank"><Button>My Projects</Button></Link>
+            <h3 className="text-2xl lg:text-4xl font-semibold">
+              Hi, I&apos;m Heros
+            </h3>
+            <h2 className="text-4xl sm:text-6xl lg:text-[80px] font-semibold bg-gradient-to-r from-blue-600 to-blue-900 bg-clip-text text-transparent">
+              Web Developer
+            </h2>
+            <div className="my-6 flex justify-center">
+              <Carrousel />
+            </div>
+            <Link
+              href={'https://github.com/herosnuciatelli?tab=repositories'}
+              target="_blank"
+            >
+              <Button>My Projects</Button>
+            </Link>
           </div>
         </section>
         <MaxWidthWrapper className="py-12">
           <section>
-              <div className="text-center">
-                <h2 className="font-semibold text-2xl">Profissional Experience</h2>
-                <p className="text-zinc-900/60">Website avaliable upon request.</p>
-              </div>
-              <div className="grid lg:grid-cols-3 gap-3 py-12">
-                <div>
-                  <div className="cursor-pointer">
-                    <Modal><div className="cursor-pointer min-h-60 bg-[url('/images/imac-screen-mockup.png')] w-full border rounded bg-center bg-cover"></div></Modal>
+            <div className="text-center">
+              <h2 className="font-semibold text-2xl">
+                Profissional Experience
+              </h2>
+              <p className="text-zinc-900/60">
+                Website avaliable upon request.
+              </p>
+            </div>
+            <div className="grid lg:grid-cols-3 gap-3 py-12">
+              <Link href={'https://diasclinic.com/'} target="_blank">
+                <div className="border rounded-lg bg-zinc-50 overflow-hidden group hover:scale-105 transition-all hover:shadow-2xl shadow-zinc-50">
+                  <div className="cursor-pointer h-60 overflow-hidden">
+                    <div className="cursor-pointer min-h-60 bg-[url('/images/imac-screen-mockup.png')] group-hover:scale-110 scale-125 w-full rounded-t-lg bg-center bg-cover transition-all"></div>
                   </div>
-                  <div className="mt-6 flex flex-col gap-2">
-                    <Modal>
-                      <h2 className="font-semibold text-lg lg:text-xl cursor-pointer group"><span className="bg-gradient-to-r from-blue-600 to-blue-900 bg-clip-text group-hover:text-transparent transition-all">Top-rated clinic in Notting Hill </span>🔒</h2>
-                    </Modal>
+                  <div className="my-9 flex flex-col gap-2 px-2">
+                    <h2 className="font-semibold text-lg lg:text-xl cursor-pointer group">
+                      <span className="bg-gradient-to-r from-blue-600 to-blue-900 bg-clip-text group-hover:text-transparent transition-all">
+                        Top-rated clinic in Notting Hill{' '}
+                      </span>
+                      🔒
+                    </h2>
+
                     <p className="text-zinc-900/60">Web Developer</p>
                     <p>Launched a website that enhanced customer metrics.</p>
                   </div>
                 </div>
-              </div>
+              </Link>
+            </div>
           </section>
           <section className="py-12">
-              <div className="text-center">
-                <h2 className="font-semibold text-2xl">Case Study</h2>
+            <div className="text-center">
+              <h2 className="font-semibold text-2xl">Case Study</h2>
+            </div>
+            <div className="grid lg:grid-cols-3 gap-3 py-12">
+              <div className="cursor-pointer group">
+                <Link href={'/case-study/polyhedra'}>
+                  <div className="cursor-pointer min-h-60 bg-[url('/images/polyhedra-mockup.png')] border rounded bg-center bg-cover"></div>
+                  <div className="mt-6 flex flex-col gap-2">
+                    <h2 className="font-semibold text-lg lg:text-xl bg-gradient-to-r cursor-pointer from-blue-600 to-blue-900 bg-clip-text group-hover:text-transparent transition-all">
+                      Study of Polyhedron
+                    </h2>
+                    <p className="text-zinc-900/60">
+                      UI/UX Design, Web Developer, Case Study
+                    </p>
+                    <p>
+                      Created a unique study of polyhedron experience through 3D
+                      models on a website
+                    </p>
+                  </div>
+                </Link>
               </div>
-              <div className="grid lg:grid-cols-3 gap-3 py-12">
-                
-                <div className="cursor-pointer group">
-                  <Link href={'/case-study/polyhedra'}>
-                    <div className="cursor-pointer min-h-60 bg-[url('/images/polyhedra-mockup.png')] border rounded bg-center bg-cover"></div>
-                      <div className="mt-6 flex flex-col gap-2">
-                        <h2 className="font-semibold text-lg lg:text-xl bg-gradient-to-r cursor-pointer from-blue-600 to-blue-900 bg-clip-text group-hover:text-transparent transition-all">Study of Polyhedron</h2>
-                        <p className="text-zinc-900/60">UI/UX Design, Web Developer, Case Study</p>
-                        <p>Created a unique study of polyhedron experience through 3D models on a website</p>
-                      </div>
-                  </Link>
-                </div>
-              </div>
+            </div>
           </section>
         </MaxWidthWrapper>
       </main>
       <Footer />
     </div>
-  );
+  )
 }

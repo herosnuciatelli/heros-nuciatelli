@@ -1,6 +1,6 @@
-import { Footer } from "@/components/Footer";
-import MaxWidthWrapper from "@/components/MaxWidthWrapper";
-import Image from "next/image";
+import { Footer } from '@/components/Footer'
+import MaxWidthWrapper from '@/components/MaxWidthWrapper'
+import Image from 'next/image'
 
 export default function About() {
   return (
@@ -9,15 +9,40 @@ export default function About() {
         <MaxWidthWrapper>
           <div className="grid lg:grid-cols-2 py-20">
             <div>
-              <h2 className="font-semibold text-2xl">Get to know more <span className="bg-gradient-to-r from-blue-600 to-blue-900 bg-clip-text text-transparent">about Heros</span></h2>
+              <h2 className="font-semibold text-2xl">
+                Get to know more{' '}
+                <span className="bg-gradient-to-r from-blue-600 to-blue-900 bg-clip-text text-transparent">
+                  about Heros
+                </span>
+              </h2>
               <div className="flex flex-col gap-3 mt-6">
-                <p className="text-lg">I have recently been attending the computer technician course at Colégio Cruzeiro do Sul and working as a freelancer and developing my own business.</p>
-                <p className="text-lg">I am a motivated and enthusiastic web developer with a passion for creating solutions. I leverage my repertoire in strong logic and technical skills to create innovative and creative solutions.</p>
-                <p className="text-lg">I have experience in developing websites and platforms. With persistence, a positive attitude, and a growth-oriented mindset, I am constantly seeking opportunities to expand my knowledge and skills as a web developer.</p>
+                <p className="text-lg">
+                  I have recently been attending the computer technician course
+                  at Colégio Cruzeiro do Sul and working as a freelancer and
+                  developing my own business.
+                </p>
+                <p className="text-lg">
+                  I am a motivated and enthusiastic web developer with a passion
+                  for creating solutions. I leverage my repertoire in strong
+                  logic and technical skills to create innovative and creative
+                  solutions.
+                </p>
+                <p className="text-lg">
+                  I have experience in developing websites and platforms. With
+                  persistence, a positive attitude, and a growth-oriented
+                  mindset, I am constantly seeking opportunities to expand my
+                  knowledge and skills as a web developer.
+                </p>
               </div>
             </div>
             <div>
-              <Image src={'/images/character.png'} className="w-full" alt="my character" width={1000} height={100} />
+              <Image
+                src={'/images/character.png'}
+                className="w-full"
+                alt="my character"
+                width={1000}
+                height={100}
+              />
             </div>
           </div>
           <div className="grid grid-cols-2 grid-rows-2 gap-y-9">
@@ -42,11 +67,11 @@ export default function About() {
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold">☕  Personal Interests</h3>
+              <h3 className="font-semibold">☕ Personal Interests</h3>
               <ul>
-                  <li>Coffee</li>
-                  <li>Traveling</li>
-                  <li>Workout</li>
+                <li>Coffee</li>
+                <li>Traveling</li>
+                <li>Workout</li>
               </ul>
             </div>
             <div>
@@ -65,6 +90,5 @@ export default function About() {
 
       <Footer />
     </>
-
   )
 }
