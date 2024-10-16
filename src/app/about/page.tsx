@@ -56,6 +56,7 @@ export default function About() {
                 <li>React.js</li>
                 <li>Next.js</li>
                 <li>Tailwind CSS</li>
+                <li>Node.js</li>
                 <li>... and more!</li>
               </ul>
             </div>

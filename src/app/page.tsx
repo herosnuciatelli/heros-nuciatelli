@@ -1,9 +1,13 @@
+'use client'
+
 import { Footer } from '@/components/Footer'
 import { Icons } from '@/components/Icons'
 import MaxWidthWrapper from '@/components/MaxWidthWrapper'
-import { Button } from '@/components/ui/button'
+import { buttonVariants } from '@/components/ui/button'
 import Link from 'next/link'
 import { Carrousel } from '@/components/Carrousel'
+
+import { motion } from 'framer-motion'
 
 export default function Home() {
   return (
@@ -20,9 +24,17 @@ export default function Home() {
             <h3 className="text-2xl lg:text-4xl font-semibold">
               Hi, I&apos;m Heros
             </h3>
-            <h2 className="text-4xl sm:text-6xl lg:text-[80px] font-semibold bg-gradient-to-r from-blue-600 to-blue-900 bg-clip-text text-transparent">
+            <motion.h2
+              initial={{ opacity: 0, y: 100 }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{ duration: 0.5 }}
+              className="text-4xl sm:text-6xl lg:text-[80px] font-semibold bg-gradient-to-r from-blue-600 to-blue-900 bg-clip-text text-transparent"
+            >
               Web Developer
-            </h2>
+            </motion.h2>
             <div className="my-6 flex justify-center">
               <Carrousel />
             </div>
@@ -30,7 +42,13 @@ export default function Home() {
               href={'https://github.com/herosnuciatelli?tab=repositories'}
               target="_blank"
             >
-              <Button>My Projects</Button>
+              <motion.button
+                initial={{ scale: 1 }}
+                whileHover={{ scale: 1.05 }}
+                className={buttonVariants({ variant: 'default' })}
+              >
+                My Projects
+              </motion.button>
             </Link>
           </div>
         </section>
@@ -46,7 +64,14 @@ export default function Home() {
             </div>
             <div className="grid lg:grid-cols-3 gap-3 py-12">
               <Link href={'https://diasclinic.com/'} target="_blank">
-                <div className="border rounded-lg bg-zinc-50 overflow-hidden group hover:scale-105 transition-all hover:shadow-2xl shadow-zinc-50">
+                <motion.div
+                  initial={{ opacity: 0, y: 100 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3 }}
+                  whileHover={{ scale: 1.05 }}
+                  className="border rounded-lg bg-zinc-50 overflow-hidden group"
+                >
                   <div className="cursor-pointer h-60 overflow-hidden">
                     <div className="cursor-pointer min-h-60 bg-[url('/images/imac-screen-mockup.png')] group-hover:scale-110 scale-125 w-full rounded-t-lg bg-center bg-cover transition-all"></div>
                   </div>
@@ -61,7 +86,7 @@ export default function Home() {
                     <p className="text-zinc-900/60">Web Developer</p>
                     <p>Launched a website that enhanced customer metrics.</p>
                   </div>
-                </div>
+                </motion.div>
               </Link>
             </div>
           </section>
